@@ -140,6 +140,8 @@ with st.sidebar.form(key='add_contact_form'):
             "role": role,
         }
         contacts.append(new_contact)
+        # Reset the form
+        st.session_state.form.clear()
         st.sidebar.success(f"Contact {name} added successfully!")
 
 # Main content for email generation
